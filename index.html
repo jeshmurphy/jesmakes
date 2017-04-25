@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<title>JesMakes</title>
+	<meta content="JesMakes" name="Jessie H Murphy">
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.js"></script>
+	<link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="assets/fontawesome/css/font-awesome.css" rel="stylesheet">
+	<link href="assets/gridloading/css/component.css" rel="stylesheet">
+	<link href="assets/animate.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="http://cdn.intercoolerjs.org/intercooler-1.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mockjax/1.6.2/jquery.mockjax.js" type="text/javascript"></script>
+	<script src="./instafeed.min.js" type="text/javascript"></script>
+</head>
+<body>
+	<script type="text/javascript">
+	 var feed = new Instafeed({
+	 get: 'user',
+	 userId: '305851928',
+	 clientId: '5908c605f7604368a1fa794ef6c19ea8',
+	 accessToken: '305851928.5908c60.3f1d65dcc5154abeb99e5ed39aa6234f',
+	 resolution: 'standard_resolution',
+	 template: '<li><img alt="portfolio" src="{{image}}"><div class="overlay animated fadeIn"><span class="animated bounceIn"><a href="{{link}}" target="_blank"><i class="fa fa-link"><\/i> View <\/a><\/span><\/div><\/li>',
+	 filter: function(image) {
+	   return image.tags.indexOf('nyc') >= 0;
+	 }
+	});
+	feed.run();
+	</script>
+	<div class="content-body">
+		<!-- header -->
+		<div class="header-bg fullpage" id="top">
+			<div class="header fullpage">
+				<div class="container">
+					<div class="absolute-center">
+						<div class="row">
+							<div class="col-sm-9">
+								<h1 class="info animated fadeInDown"><a class="logo" href="">Hi<br>
+								I'm <u>Jes</u></a><br>
+								<b>I make</b> <span>stuff</span></h1>
+								<a class="btn scroll animated bounceInUp" href="#about-me">About Me</a>
+								<a class="btn animated bounceInUp" href="http://www.jesmakes.com/resume.html" target="_blank">Resume</a>
+								<a class="btn scroll animated bounceInDown" href="#contact">Say Hello</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	    <!-- header -->
+		</div>
+		<!-- about me -->
+		<div class="portfolio spacer" id="about-me">
+			<div class="container">
+				<h2 class="center">About Me</h2>
+			</div>
+			<div class="col-sm-offset-3 col-sm-6 contact-form">
+			<p>I am a project manager with a passion for front-end development. I lead teams of developers to build websites for small and big businesses alike. I like to make things, fix things, and help others - especially through technology.<br/><br/>
+			<span style="font-weight:bold;">Work:</span>
+			<br/>
+			I co-founded <a href="http://nullipotent.com/" target="_blank">Nullipotent</a> [nəlipōt(ə)nt], a New York based technology company, in 2013. As Vice President, I work with our clients to encapsulate their brand and the core of their company’s ideology through major website redesigns, mobile app development, and experiential design. I've enjoyed learning to wear different hats while building a startup. I love to roll up my sleeves and delve into challenges to find creative solutions.</br><br/>
+			<span style="font-weight:bold;">Volunteer:</span>
+			<br/>
+			For the past several years I've taught computer classes to seniors through <a href="https://www.newyorkcares.org/front" target="_blank">NY Cares</a>. I am currently teaching English language literacy, through that same organization. I also volunteer with <a href="http://www.ohny.org/" target="_blank">Open House New York</a> for OHNY Weekend in the fall. I commit myself to giving back wherever I can, and firmly believe that everyone stands to benefit through volunteering and helping others. 
+			<br/><br/>
+			<span style="font-weight:bold;">Leisure:</span>
+			<br/>
+			When I'm not working or volunteering I can be found exploring the city I love: museums, restaurants, Broadway shows, and galleries. But I am equally happy hiking in the great outdoors of the Hudson River Valley. I often experiment in the kitchen, my friends and family the willing tasters. And nothing beats a thick history book and a good cup of coffee on a rainy day.</br></br>
+			<span style="font-weight:bold;">Location:</span> <a href="#" style="text-decoration:none; color:#555;">New York</a>
+			<br/>
+			</div>
+		</div>
+        <!-- about me-->
+		<!-- photos -->
+		<div class="portfolio spacer" id="photos">
+			<div class="container">
+				<h2 class="center"></h2>
+				<div class="grid effect-2" id="grid" style="margin-left: 2em">
+					<div id="instafeed"></div>
+				</div>
+			</div>
+			<!-- portfolio -->
+			</div>
+		</div><!-- photos -->
+	</div>
+	<!-- contact -->
+	<div class="contact center spacer" id="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-offset-3 col-sm-6 contact-form">
+					<h3>Say Hello</h3>
+					<p>I am available for freelance work and collaboration.</p>
+					<form ic-post-to="/contact.php">
+						<input class="form-control" name="name" placeholder="Name" type="text"> 
+						<input class="form-control" name="email" placeholder="Email" type="text"> 
+						<textarea class="form-control" name="form_message" placeholder="Message" rows="5"></textarea>
+						<input class="btn btn-primary btn-lg" name="Submit" type="submit" value="Submit">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div><!-- contact -->
+
+	<a class="toTop scroll" href="#top"><i class="fa fa-angle-up"></i></a> <!-- gridloading script -->
+	 
+	<script src="assets/gridloading/js/modernizr.custom.js">
+	</script> 
+	<script src="assets/gridloading/js/masonry.pkgd.min.js">
+	</script> 
+	<script src="assets/gridloading/js/imagesloaded.js">
+	</script> 
+	<script src="assets/gridloading/js/classie.js">
+	</script> 
+	<script src="assets/gridloading/js/AnimOnScroll.js">
+	</script> <!-- gridloading script -->
+	 
+	<script src="assets/scripts.js">
+	</script> 
+<!-- footer -->
+	<div class="footer" style="position: FIXED; bottom:0;">
+		<div class="connect-icon">
+			<div class="prof-links clearfix animated bounceInUp">
+				<a href="https://www.linkedin.com/in/jessiehmurphy/" target="_blank"><img alt="portfolio" height="32" src="images/linked.png"></a>
+			</div>
+			<div class="prof-links clearfix animated bounceInUp">
+				<a href="https://github.com/jeshmurphy" target="_blank"><img alt="portfolio" height="32" src="images/github.png"></a>
+			</div>
+			<div class="prof-links clearfix animated bounceInUp">
+				<a href="https://twitter.com/jessiehyeran" target="_blank"><img alt="portfolio" height="32" src="images/twitter.png"></a>
+			</div>
+			<div class="prof-links clearfix animated bounceInUp">
+				<a href="https://www.instagram.com/jeshmurphy" target="_blank"><img alt="portfolio" height="32" src="images/instagram.png"></a>
+			</div>
+		</div>
+		<div class="copy">
+			&copy;
+			<script type="text/javascript">
+			document.write(new Date().getFullYear());
+			</script> jesmakes.com - made by <a href="http://www.jesmakes.com/">me</a>
+		</div><!-- footer -->
+	</div>
+</body>
+</html>
